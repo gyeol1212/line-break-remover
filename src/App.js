@@ -32,9 +32,17 @@ function App() {
       document.body.removeChild(textArea);
     }
 
-    return (
+  function deleteText() {
+    setValue('')
+  }
+
+  return (
     <div className="App">
+      <div className='title-wrap'>
+
       <p className='title'>변환 대상</p>
+      <button className='delete-button' onClick={deleteText}>전체 삭제</button>
+      </div>
       <textarea className='input' value={value} onChange={handleChange} placeholder='텍스트를 입력해주세요.' />
       <p className='title'>
           변환 결과<span>텍스트를 클릭하면 복사할 수 있습니다.</span>
